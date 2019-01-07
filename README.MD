@@ -5,6 +5,5 @@ Renaming every subtitle file to match the video file is a pain in the ass, isn't
 That's where this script comes in handy.
 
 ## Motivation behind such a silly project
-As someone who often downloads bunch of TV shows from torrent and have to manually
-rename every damn subtitle file, I decided to make this script as to make the computer do it for me. 
-Lazy or genius? you decide.
+A few years back I would often have to manually rename all subtitle filew and I always wondered why isn't there a
+software that does it for you ? Well, fine, I'll do it myself. 
