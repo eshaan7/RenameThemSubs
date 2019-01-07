@@ -5,5 +5,5 @@ Renaming every subtitle file to match the video file is a pain in the ass, isn't
 That's where this script comes in handy.
 
 ## Motivation behind such a silly project
-A few years back I would often have to manually rename all subtitle filew and I always wondered why isn't there a
+A few years back I would often have to manually rename all subtitle files to match episode name and I always wondered why isn't there a
 software that does it for you ? Well, <a href="https://www.youtube.com/watch?v=EzWNBmjyv7Y">fine, I'll do it myself.</a> 
