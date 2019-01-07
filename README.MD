@@ -1,6 +1,6 @@
 # Rename Them Subs
 ## Download
-I compiled the python script using <a href="https://github.com/pyinstaller/pyinstaller">pyinstaller</a> and converted it into a standalone windows executable(.exe). It can be found <a href="https://goo.gl/jPnwf7"><b>here</b></a>.
+I compiled the python script using <a href="https://github.com/pyinstaller/pyinstaller">pyinstaller</a> and converted it into a standalone windows executable(.exe). It is included in the repo and can be found <a href="http://www.mediafire.com/file/u2p7auvudwm1c8d/renamethemsubs.exe/file"><b>here</b></a>.
 ## What the script does
 You download a TV show from torrent and find the suitable subtitle files from some website.
 Renaming every subtitle file to match the video file is a pain in the ass, isn't it?
