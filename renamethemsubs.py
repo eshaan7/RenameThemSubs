@@ -8,9 +8,7 @@ github: github.com/eshaan7
 	That's where this script comes in handyy
 '''
 
-
-
-import os
+import os, msvcrt
 
 def menu():
 	print("\t"+"*"*8+"MENU"+"*"*8)
@@ -50,9 +48,10 @@ def rename_files(path, vidFiles, subFiles, sub_format):
 	subFiles.sort(key=lambda f: int(filter(str.isdigit, f)))
 	os.chdir(path)
 	for i,vname in enumerate(vidFiles):
-		print("{0} renamed to {1} ") % (subFiles[i], os.path.splitext(vname)[0])
+		print("{0} renamed to {1} ".format(subFiles[i], os.path.splitext(vname)[0]))
 		os.rename(subFiles[i], os.path.splitext(vname)[0]+sub_format)
-	Quit = input('Press Q to Quit')
+	print("\nPress Q to Quit")
+	msvcrt.getch()
 	return 
 
 def main():
