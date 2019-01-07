@@ -10,7 +10,7 @@ github: github.com/eshaan7
 
 
 
-import os, time
+import os
 
 def menu():
 	print("\t"+"*"*8+"MENU"+"*"*8)
@@ -52,7 +52,7 @@ def rename_files(path, vidFiles, subFiles, sub_format):
 	for i,vname in enumerate(vidFiles):
 		print("{0} renamed to {1} ") % (subFiles[i], os.path.splitext(vname)[0])
 		os.rename(subFiles[i], os.path.splitext(vname)[0]+sub_format)
-	time.sleep(20)
+	Quit = input('Press Q to Quit')
 	return 
 
 def main():
