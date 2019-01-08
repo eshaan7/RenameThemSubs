@@ -10,6 +10,6 @@ That's where this script comes in handy.
 A few years back I would often have to manually rename all subtitle files to match episode name and I always wondered why isn't there a
 software that does it for you ? Well, <a href="https://www.youtube.com/watch?v=EzWNBmjyv7Y">fine, I'll do it myself.</a> 
 ## Support the project and the author
-Buy me Coffee ?  
+Buy me a coffee ?
 [![Build Status](https://img.shields.io/badge/Paypal-DONATE-blue.svg?logo=paypal
 )](https://paypal.me/eshaanbansal)
