@@ -1,4 +1,8 @@
 # Rename Them Subs
+
+[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)](https://forthebadge.com)
+
 ## Download
 I compiled the python script using <a href="https://github.com/pyinstaller/pyinstaller">pyinstaller</a> and converted it into a standalone windows executable(.exe). It is included in the [repo's release](https://github.com/Eshaan7/RenameThemSubs/releases/) and can be found <a href="https://mega.nz/#!iihUTCzR!rAQdsCsZfveJbYgwMD0JX4OymIpHlAmnbhYT1A6pIpE"><b>here</b></a> as well.
 ## What the script does
