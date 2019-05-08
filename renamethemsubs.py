@@ -13,28 +13,49 @@ import os, msvcrt
 def menu():
 	print("\t"+"*"*8+"MENU"+"*"*8)
 	print("\n\t"+"-"*20)
-	print("\t1. Same directory")
-	print("\t2. Different directory")
+	print("\tFor subs and video files,")
+	print("\t1. In same directory")
+	print("\t2. In different directory")
+	print("\t3. In current directory: {0}".format(os.getcwd()))
 	print("\t"+"-"*20)
-	choice = int(raw_input("\n\tEnter choice(1-2): "))
+	choice = int(raw_input("\n\tEnter choice(1-3): "))
 	return choice
 
 def diff_path(): #choice=2
 	vid_path = str(raw_input("Full path to video directory(example: /home/...): "))
 	sub_path = str(raw_input("Full path to subtitles directory(example: /home/...): "))
 	sub_format = str(raw_input("Extension of subtitle file(ex: .sub, .srt, etc): "))
-	vidFiles = os.listdir(vid_path)
-	subFiles = os.listdir(sub_path)
+	vidFiles = []
+	subFiles = []
+	for name in os.listdir(vid_path):
+		if (name.endswith('.mp4') or name.endswith('.mkv') or name.endswith('.avi')):
+			vidFiles.append(name)
+	for name in os.listdir(sub_path):
+		if (name.endswith(sub_format)):
+			subFiles.append(name)
 	rename_files(sub_path, vidFiles, subFiles, sub_format)
 	return 
 
 def same_path(): #choice=1
 	dir_path = str(raw_input("Full path to video directory(example: /home/...): "))
-	dirFiles = os.listdir(dir_path)
-	vid_format = str(raw_input("Extension of video file(ex: .mp4, .mkv, etc): "))
 	sub_format = str(raw_input("Extension of subtitle file(ex: .sub, .srt, etc): "))
+	dirFiles = os.listdir(dir_path)
 	vidFiles = []
 	subFiles = []
+	for name in dirFiles:
+		if (name.endswith('.mp4') or name.endswith('.mkv') or name.endswith('.avi')):
+			vidFiles.append(name)
+		elif (name.endswith(sub_format)):
+			subFiles.append(name)
+	rename_files(dir_path, vidFiles, subFiles, sub_format)
+	return
+
+def for_current_dir(): #choice=3
+	dirFiles = os.listdir(os.getcwd())
+	vidFiles = []
+	subFiles = []
+	vid_format = str(raw_input("Extension of video file(ex: .mp4, .mkv, etc): "))
+	sub_format = str(raw_input("Extension of subtitle file(ex: .sub, .srt, etc): "))
 	for name in dirFiles:
 		if (name.endswith(vid_format)):
 			vidFiles.append(name)
@@ -60,6 +81,8 @@ def main():
 		same_path()
 	elif choice==2:
 		diff_path()
+	elif choice==3:
+		for_current_dir()
 		
 main()
 
