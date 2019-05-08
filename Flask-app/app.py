@@ -30,8 +30,10 @@ def home():
 		sub_format = os.path.splitext(subFiles[0])[1]
 		rename_files(vidFiles, subFiles, sub_format)
 		return render_template('home2.html', subFiles=subFiles, vidFiles=vidFiles)
-	with Path(os.path.join(project_dir, app.config['UPLOAD_PATH'])) as cwd:
-		for f in cwd.files():
+	try:
+		os.mkdir(app.config['UPLOAD_PATH'])
+	except FileExistsError:
+		for f in os.listdir(app.config['UPLOAD_PATH']):
 			os.remove(f)
 	return render_template('home.html')
 
