@@ -1,0 +1,10 @@
+Click==7.0
+Flask==1.0.2
+gunicorn==19.9.0
+importlib-metadata==0.10
+itsdangerous==1.1.0
+Jinja2==2.10.1
+MarkupSafe==1.1.1
+path.py==12.0.1
+Werkzeug==0.15.2
+zipp==0.4.0

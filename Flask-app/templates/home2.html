@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+	<div class="content-section">
+		{% if subFiles %}
+			<h4>Subtitle Files:</h4>
+			<ol>
+			{% for file in subFiles %}
+				<li>{{ file }}</li>
+			{% endfor %}
+			</ol>
+		{% endif %}
+		{% if vidFiles %}
+			<h4>Video Files:</h4>
+			<ol>
+			{% for file in vidFiles %}
+				<li>{{ file }}</li>
+			{% endfor %}
+			</ol>
+		{% endif %}
+		<a href="{{ url_for('download') }}" target="_blank"><button class='btn btn-dark'>Download!</button></a>
+
+	</div>
+
+{% endblock %}

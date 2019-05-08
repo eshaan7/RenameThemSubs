@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+	<div class="content-section">
+
+		<form method="POST" enctype="multipart/form-data" action="{{ url_for('home') }}">
+    	  <fieldset class="form-group mt-5">
+	        <legend class="border-top border-bottom mt-2 mb-4">Choose Directory for subtitle files</legend>
+		  <div class="form-group">
+	      	<input class="form-control" type="file" name="subFiles" webkitdirectory="" />
+	      </div>
+ 		  </fieldset>
+ 		  <fieldset class="form-group mt-2">
+	        <legend class="border-top border-bottom mt-2 mb-4">Choose Directory for Video files</legend>
+		  <div class="form-group">
+	      	<input class="form-control" type="file" name="vidFiles" webkitdirectory="" directory="">
+	      </div>
+ 		  </fieldset>
+     	  <div class="form-group">
+      		<button type="submit" class="btn btn-info">Upload</button>
+      	  </div>
+   		</form>
+   		
+	</div>
+{% endblock %}
