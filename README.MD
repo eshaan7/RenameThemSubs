@@ -9,6 +9,8 @@
 
 2. This is now also available as a web application. https://RenameThemSubs.herokuapp.com/
 
+3. git clone this repo and directly run `python3 renamethemsubs.py`
+
 ## What the script does
 You download a TV show from torrent and find the suitable subtitle files from some website.
 Renaming every subtitle file to match the video file is a pain in the ass, isn't it?

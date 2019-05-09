@@ -1,4 +1,4 @@
-import os, json
+import os, json, shutil
 from path import Path
 from zipfile import ZipFile 
 from flask import Flask, render_template, request, flash, send_from_directory, redirect, url_for
@@ -44,8 +44,8 @@ def home():
 	try:
 		os.mkdir(app.config['UPLOAD_PATH'])
 	except FileExistsError:
-		for f in os.listdir(app.config['UPLOAD_PATH']):
-			os.remove(f)
+		shutil.rmtree(app.config['UPLOAD_PATH'], ignore_errors=True)
+		os.mkdir(app.config['UPLOAD_PATH'])
 	return render_template('home.html')
 
 def rename_files(vidFiles, subFiles, sub_format):
@@ -63,4 +63,4 @@ def rename_files(vidFiles, subFiles, sub_format):
 	return redirect(url_for('download'))
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
