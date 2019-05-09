@@ -11,6 +11,7 @@
 			{% endfor %}
 			</ol>
 		{% endif %}
+		<h2>Renamed to</h2>
 		{% if vidFiles %}
 			<h4>Video Files:</h4>
 			<ol>
@@ -20,7 +21,6 @@
 			</ol>
 		{% endif %}
 		<a href="{{ url_for('download') }}" target="_blank"><button class='btn btn-dark'>Download!</button></a>
-
 	</div>
 
 {% endblock %}

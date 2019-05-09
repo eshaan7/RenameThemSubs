@@ -1,25 +1,36 @@
 {% extends "layout.html" %}
 
+{% block head %} 
+
+	<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+
+{% endblock %}
+
 {% block content %}
 	<div class="content-section">
-
 		<form method="POST" enctype="multipart/form-data" action="{{ url_for('home') }}">
-    	  <fieldset class="form-group mt-5">
+    	  <fieldset class="form-group mt-2">
 	        <legend class="border-top border-bottom mt-2 mb-4">Choose Directory for subtitle files</legend>
 		  <div class="form-group">
 	      	<input class="form-control" type="file" name="subFiles" webkitdirectory="" />
 	      </div>
  		  </fieldset>
- 		  <fieldset class="form-group mt-2">
-	        <legend class="border-top border-bottom mt-2 mb-4">Choose Directory for Video files</legend>
-		  <div class="form-group">
-	      	<input class="form-control" type="file" name="vidFiles" webkitdirectory="" directory="">
-	      </div>
- 		  </fieldset>
      	  <div class="form-group">
-      		<button type="submit" class="btn btn-info">Upload</button>
+      		<button type="submit" style="display:none;" id="uploadBtn" class="btn btn-info">Upload</button>
       	  </div>
    		</form>
-   		
+   		<fieldset class="form-group mt-2">
+	      <legend class="border-top border-bottom mt-2 mb-4">Choose Directory for Video files</legend>
+		  <div class="form-group">
+	      	<input class="form-control" type="file" id="vidDirPicker" name="vidFiles" webkitdirectory multiple />
+	      </div>
+ 		</fieldset>
+      	<!-- Submit button -->
+      	<a href="" id="submitBtn" class="btn btn-info">Rename 'em</a> 
+
 	</div>
 {% endblock %}
