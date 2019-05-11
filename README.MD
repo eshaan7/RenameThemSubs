@@ -3,7 +3,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)](https://forthebadge.com)
 
-![GitHub followers](https://img.shields.io/github/followers/eshaan7.svg?style=social)
+[![GitHub followers](https://img.shields.io/github/followers/eshaan7.svg?style=social)](https://github.com/Eshaan7)
 [![HitCount](http://hits.dwyl.io/eshaan7/RenameThemSubs.svg)](http://hits.dwyl.io/eshaan7/RenameThemSubs)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/Eshaan7/RenameThemSubs/issues)
 ![GitHub All Releases](https://img.shields.io/github/downloads/eshaan7/renamethemsubs/total.svg?style=social)
