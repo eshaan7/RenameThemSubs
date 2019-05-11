@@ -10,7 +10,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <!-- local css -->
- 	  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+ 	  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}"/>
     {% block head %}{% endblock %}
     <title>RenameThemSubs</title>
 </head>
@@ -49,11 +49,10 @@
         </div>
         <div class="col-md-4">
           <div class="content-section">
-            <h3>Sidebar</h3>
-            <p class='text-muted'>Made with &hearts;
+            <h4 class='text-muted'>Made with &hearts;</h4>
               <ul class="list-group">
-                <li class="list-group-item list-group-item-light">Github</li>
-                <li class="list-group-item list-group-item-light">Heroku</li>
+                <li class="list-group-item list-group-item-light"><a class='text-muted' href="https://github.com/Eshaan7/RenameThemSubs" target="_blank">Github</a></li>
+                <li class="list-group-item list-group-item-light"><a class='text-muted' href="https://github.com/Eshaan7/RenameThemSubs/tree/master/Flask-app" target="_blank">Heroku</a></li>
               </ul>
             </p>
           </div>
