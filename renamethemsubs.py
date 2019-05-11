@@ -24,7 +24,7 @@ def menu():
 def diff_path(): #choice=2
 	vid_path = str(raw_input("Full path to video directory(example: /home/...): "))
 	sub_path = str(raw_input("Full path to subtitles directory(example: /home/...): "))
-	sub_format = str(raw_input("Extension of subtitle file(ex: .sub, .srt, etc): "))
+	sub_format = str(raw_input("Extension of subtitle files(ex: .sub, .srt, etc): "))
 	vidFiles = []
 	subFiles = []
 	for name in os.listdir(vid_path):
@@ -38,7 +38,7 @@ def diff_path(): #choice=2
 
 def same_path(): #choice=1
 	dir_path = str(raw_input("Full path to video directory(example: /home/...): "))
-	sub_format = str(raw_input("Extension of subtitle file(ex: .sub, .srt, etc): "))
+	sub_format = str(raw_input("Extension of subtitle files(ex: .sub, .srt, etc): "))
 	dirFiles = os.listdir(dir_path)
 	vidFiles = []
 	subFiles = []
@@ -51,13 +51,13 @@ def same_path(): #choice=1
 	return
 
 def for_current_dir(): #choice=3
-	dirFiles = os.listdir(os.getcwd())
+	dir_path = os.getcwd()
+	dirFiles = os.listdir(dir_path)
 	vidFiles = []
 	subFiles = []
-	vid_format = str(raw_input("Extension of video file(ex: .mp4, .mkv, etc): "))
-	sub_format = str(raw_input("Extension of subtitle file(ex: .sub, .srt, etc): "))
+	sub_format = str(raw_input("Extension of subtitle files(ex: .sub, .srt, etc): "))
 	for name in dirFiles:
-		if (name.endswith(vid_format)):
+		if (name.endswith('.mp4') or name.endswith('.mkv') or name.endswith('.avi')):
 			vidFiles.append(name)
 		elif (name.endswith(sub_format)):
 			subFiles.append(name)
