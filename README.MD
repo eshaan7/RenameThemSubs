@@ -29,3 +29,4 @@ software that does it for you ? Well, <a href="https://www.youtube.com/watch?v=E
 Buy me a coffee ?
 [![Build Status](https://img.shields.io/badge/Paypal-DONATE-blue.svg?logo=paypal
 )](https://paypal.me/eshaanbansal)
+BTC: 3DarX5wnUUv9q7NXKshxYmvFnCwECJKFZY
