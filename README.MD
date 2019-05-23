@@ -10,7 +10,7 @@
 
 ## How to Use
 
-1. I compiled the python script using <a href="https://github.com/pyinstaller/pyinstaller">pyinstaller</a> and converted it into a standalone windows executable(.exe). It is included in the [repo's release](https://github.com/Eshaan7/RenameThemSubs/releases/) and can be found <a href="https://mega.nz/#!iihUTCzR!rAQdsCsZfveJbYgwMD0JX4OymIpHlAmnbhYT1A6pIpE"><b>here</b></a> as well.
+1. I compiled the python script using <a href="https://github.com/pyinstaller/pyinstaller">pyinstaller</a> and converted it into a standalone windows executable(.exe). It is included in the [repo's release](https://github.com/Eshaan7/RenameThemSubs/releases/).
 
 2. This is now also available as a web application. https://RenameThemSubs.herokuapp.com/
    (For some unknown reason, It only works on Google Chrome for now)
