@@ -13,7 +13,6 @@
 1. I compiled the python script using <a href="https://github.com/pyinstaller/pyinstaller">pyinstaller</a> and converted it into a standalone windows executable(.exe). It is included in the [repo's release](https://github.com/Eshaan7/RenameThemSubs/releases/).
 
 2. This is now also available as a web application. https://RenameThemSubs.herokuapp.com/
-   (For some unknown reason, It only works on Google Chrome for now)
 
 3. git clone this repo and directly run `python3 renamethemsubs.py` **(Recommended)**
 
