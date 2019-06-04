@@ -15,7 +15,7 @@
 2. This is now also available as a web application. https://RenameThemSubs.herokuapp.com/
    (For some unknown reason, It only works on Google Chrome for now)
 
-3. git clone this repo and directly run `python3 renamethemsubs.py`
+3. git clone this repo and directly run `python3 renamethemsubs.py` **(Recommended)**
 
 ## What the script does
 You download a TV show from torrent and find the suitable subtitle files from some website.
