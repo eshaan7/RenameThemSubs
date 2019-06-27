@@ -8,7 +8,8 @@ github: github.com/eshaan7
 	That's where this script comes in handyy
 '''
 
-import os, msvcrt
+import os
+import msvcrt
 
 def menu():
 	print("\t"+"*"*8+"MENU"+"*"*8)
