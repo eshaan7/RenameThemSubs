@@ -21,7 +21,7 @@ def get_data():
 	data = request.get_json()
 	global vidFiles
 	vidFiles = data['data']
-	return 
+	return url_for('home')
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/home', methods=['GET', 'POST'])
@@ -38,7 +38,6 @@ def home():
 			subFiles.append(filename)
 		sub_format = os.path.splitext(subFiles[0])[1]
 		global vidFiles
-		print(vidFiles)
 		rename_files(vidFiles, subFiles, sub_format)
 		return render_template('home2.html', subFiles=subFiles, vidFiles=vidFiles)
 	try:
