@@ -6,13 +6,13 @@
 [![GitHub followers](https://img.shields.io/github/followers/eshaan7.svg?style=social)](https://github.com/Eshaan7)
 [![HitCount](http://hits.dwyl.io/eshaan7/RenameThemSubs.svg)](http://hits.dwyl.io/eshaan7/RenameThemSubs)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/Eshaan7/RenameThemSubs/issues)
-![GitHub All Releases](https://img.shields.io/github/downloads/eshaan7/renamethemsubs/total.svg?style=social)
+[![GitHub All Releases](https://img.shields.io/github/downloads/eshaan7/renamethemsubs/total.svg?style=social)](https://github.com/Eshaan7/RenameThemSubs/releases/)
 
 ## How to Use
 
 1. I compiled the python script using <a href="https://github.com/pyinstaller/pyinstaller">pyinstaller</a> and converted it into a standalone windows executable(.exe). It is included in the [repo's release](https://github.com/Eshaan7/RenameThemSubs/releases/).
 
-2. This is now also available as a web application. https://RenameThemSubs.herokuapp.com/
+2. This is now also available as a web application. https://RenameThemSubs.herokuapp.com/ **(Recommended)**
 
 3. git clone this repo and directly run `python3 renamethemsubs.py` **(Recommended)**
 
