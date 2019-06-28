@@ -21,7 +21,7 @@ def get_data():
 	data = request.get_json()
 	global vidFiles
 	vidFiles = data['data']
-	return url_for('home')
+	return
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/home', methods=['GET', 'POST'])
