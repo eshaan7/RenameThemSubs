@@ -1,5 +1,7 @@
 # Rename Them Subs
 
+<p align="center"><img src="Flask-app/static/favicon.ico" width="400" height="400"/></p>
+
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)](https://forthebadge.com)
 
@@ -19,7 +21,7 @@
 ## What the script does
 You download a TV show from torrent and find the suitable subtitle files from some website.
 Renaming every subtitle file to match the video file is a pain in the ass, isn't it?
-That's where this script comes in handy.
+That's where this app comes in handy.
 
 ## Motivation behind such a silly project
 A few years back I would often have to manually rename all subtitle files to match episode name and I always wondered why isn't there a

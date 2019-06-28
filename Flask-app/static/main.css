@@ -32,6 +32,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 40px;
 }
 
+#logo {
+  height: 40px;
+  width: 40px;
+  margin-right: 5px;
+}
+
 ol > li {
 	font-size: 12px;
 }
