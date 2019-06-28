@@ -9,7 +9,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bg-steel {
-  background-color: #5f788a;
+  /* background-color: #5f788a; */
+  background-color: #252a37;
 }
 
 .site-header .navbar-nav .nav-link {
@@ -42,6 +43,11 @@ ol > li {
 	font-size: 12px;
 }
 
+.btn {
+  color: white;
+  background-color: #252a37 !important;
+  border-color: #252a37;
+}
 /* FOOTER */
 
 footer {
@@ -52,7 +58,7 @@ footer {
   width: 100%;
   height: 3rem;
   padding-top: 0.9rem;
-  background-color: #5f788a !important;
+  background-color: #252a37 !important;
   color: white !important;
   text-align: center;
   font-size: 12px;
