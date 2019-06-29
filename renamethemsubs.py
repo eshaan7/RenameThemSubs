@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 '''
 Author: Eshaan Bansal
 github: github.com/eshaan7
@@ -9,7 +11,7 @@ github: github.com/eshaan7
 '''
 
 import os
-import msvcrt
+#import msvcrt
 
 def menu():
 	print("\t"+"*"*8+"MENU"+"*"*8)
@@ -19,13 +21,13 @@ def menu():
 	print("\t2. In different directory")
 	print("\t3. In current directory: {0}".format(os.getcwd()))
 	print("\t"+"-"*20)
-	choice = int(raw_input("\n\tEnter choice(1-3): "))
+	choice = int(input("\n\tEnter choice(1-3): "))
 	return choice
 
 def diff_path(): #choice=2
-	vid_path = str(raw_input("Full path to video directory(example: /home/...): "))
-	sub_path = str(raw_input("Full path to subtitles directory(example: /home/...): "))
-	sub_format = str(raw_input("Extension of subtitle files(ex: .sub, .srt, etc): "))
+	vid_path = str(input("Full path to video directory(example: /home/...): "))
+	sub_path = str(input("Full path to subtitles directory(example: /home/...): "))
+	sub_format = str(input("Extension of subtitle files(ex: .sub, .srt, etc): "))
 	vidFiles = []
 	subFiles = []
 	for name in os.listdir(vid_path):
@@ -38,8 +40,8 @@ def diff_path(): #choice=2
 	return 
 
 def same_path(): #choice=1
-	dir_path = str(raw_input("Full path to video directory(example: /home/...): "))
-	sub_format = str(raw_input("Extension of subtitle files(ex: .sub, .srt, etc): "))
+	dir_path = str(input("Full path to video directory(example: /home/...): "))
+	sub_format = str(input("Extension of subtitle files(ex: .sub, .srt, etc): "))
 	dirFiles = os.listdir(dir_path)
 	vidFiles = []
 	subFiles = []
@@ -56,7 +58,7 @@ def for_current_dir(): #choice=3
 	dirFiles = os.listdir(dir_path)
 	vidFiles = []
 	subFiles = []
-	sub_format = str(raw_input("Extension of subtitle files(ex: .sub, .srt, etc): "))
+	sub_format = str(input("Extension of subtitle files(ex: .sub, .srt, etc): "))
 	for name in dirFiles:
 		if (name.endswith('.mp4') or name.endswith('.mkv') or name.endswith('.avi')):
 			vidFiles.append(name)
@@ -72,8 +74,8 @@ def rename_files(path, vidFiles, subFiles, sub_format):
 	for i,vname in enumerate(vidFiles):
 		print("{0} renamed to {1} ".format(subFiles[i], os.path.splitext(vname)[0]))
 		os.rename(subFiles[i], os.path.splitext(vname)[0]+sub_format)
-	print("\nPress Q to Quit")
-	msvcrt.getch()
+	#print("\nPress Q to Quit")
+	#msvcrt.getch()
 	return 
 
 def main():
