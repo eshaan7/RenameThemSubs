@@ -11,7 +11,11 @@ project_dir = os.path.dirname(os.path.abspath(__file__))
 #app.config['MAX_CONTENT_LENGTH'] = 4 * 1024 * 1024 # maximum file size = 4mb 
 
 ''' PWA Stuff '''
-
+# only trigger SSLify if the app is running on Heroku
+if 'DYNO' in os.environ: 
+	from flask_sslify import SSLify
+	sslify = SSLify(app)
+	
 @app.route('/sw.js', methods=['GET'])
 def sw():
     return app.send_static_file('sw.js')
