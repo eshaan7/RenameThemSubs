@@ -10,13 +10,25 @@ app.config['UPLOAD_PATH'] = 'uploads/'
 project_dir = os.path.dirname(os.path.abspath(__file__))
 #app.config['MAX_CONTENT_LENGTH'] = 4 * 1024 * 1024 # maximum file size = 4mb 
 
+''' PWA Stuff '''
+
+@app.route('/sw.js', methods=['GET'])
+def sw():
+    return app.send_static_file('sw.js')
+
+@app.route('/offline.html')
+def offline():
+	return app.send_static_file('offline.html')
+
+''' Routes/views | Main Application Stuff ''' 
+
 vidFiles = []
 
 @app.route('/download')
 def download():
 	return send_from_directory(os.path.join(project_dir,app.config['UPLOAD_PATH']), filename='subtitles_renamed.zip', as_attachment=True, attachment_filename='subtitles_renamed.zip')
 
-@app.route('/receiver', methods=['POST'])
+@app.route('/receiver', methods=['POST']) # AJAX receiver route
 def get_data():
 	data = request.get_json()
 	global vidFiles
@@ -33,7 +45,7 @@ def home():
 			return redirect(request.url)
 		subFiles = []
 		for f in request.files.getlist('subFiles'):
-			filename = f.filename.split('/')[1]
+			filename = secure_filename(f.filename.split('/')[1])
 			f.save(os.path.join(app.config['UPLOAD_PATH'], filename))
 			subFiles.append(filename)
 		sub_format = os.path.splitext(subFiles[0])[1]

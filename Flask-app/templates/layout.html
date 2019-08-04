@@ -1,27 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <!-- "Metadata. The story behind the data" ~ Elliot Alderson -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Rename subtitles files according to TV show names">
-  <meta name="keywords" content="subtitles, tv, Eshaan Bansal, tv-series, subtile renamer, rename subtitles, subtitle management, subtitle loader">
-    <meta property="og:description" content="Rename subtitles files according to TV show names">
-    <meta property="og:title" content="RenameThemSubs">
-    <meta property="og:type" content="website">
-    <!-- Favicon -->
-  	<link rel='shortcut icon' type='image/x-icon' href="{{ url_for('static', filename='favicon.ico') }}"/>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <!-- local css -->
- 	  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}"/>
-    {% block head %}{% endblock %}
-    <title>RenameThemSubs</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block body %}
+
     <header class="site-header">
       <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
         <div class="container">
@@ -60,10 +40,11 @@
           <div class="content-section">
             <h4 class='text-muted'>Show Support &hearts;</h4>
             <hr/>
-            <h6 class='text-muted'>Open-Source Web App in Flask</h6>
+            <h6 class='text-muted'>Open-Source Progressive Web App in Flask</h6>
+            <span><button id="btnAdd" class='text-muted'>Install App</button></span>
               <ul class="list-group">
                 <li class="list-group-item list-group-item-light"><a class='text-muted' href="https://github.com/Eshaan7/RenameThemSubs" target="_blank">Github</a></li>
-                <li class="list-group-item list-group-item-light"><a class='text-muted' href="https://github.com/Eshaan7/RenameThemSubs/tree/master/Flask-app" target="_blank">Heroku</a></li>
+                <li class="list-group-item list-group-item-light"><a class='text-muted' href="https://github.com/Eshaan7/RenameThemSubs/tree/master/Flask-app" target="_blank">Heroku code</a></li>
               </ul>
             </p>
           </div>
@@ -86,19 +67,14 @@
           <a href="https://www.linkedin.com/in/eshaan7">
             <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
           </a>
-          <!--Instagram-->
-          <a href="https://instagram.com/maskofmydisguise">
-            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
       </div>
       <!-- /Footer Elements -->
     </footer>
     <!-- /Footer -->
-
+  
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
-</body>
-</html>
+
+{% endblock %}

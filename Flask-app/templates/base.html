@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- PWA -->
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+  <!-- "Metadata. The story behind the data" ~ Elliot Alderson -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Rename subtitles files according to TV show names.">
+    <meta name="keywords" content="RenameThemSubs, subtitles, tv, Eshaan Bansal, tv series, subtile renamer, rename subtitles, subtitle management, subtitle loader">
+    <meta property="og:description" content="Rename subtitles files according to TV show names">
+    <meta property="og:title" content="RenameThemSubs">
+    <meta property="og:type" content="website">
+  <!-- Favicon -->
+  	<link rel='shortcut icon' type='image/x-icon' href="{{ url_for('static', filename='images/favicon.ico') }}"/>
+  <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <!-- local css -->
+ 	  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}"/>
+    {% block head %}{% endblock %}
+  <!-- Title -->
+    <title>RenameThemSubs</title>
+</head>
+
+<body>
+   
+    {% block body %} {% endblock %}
+
+    <!-- PWA stuff -->  
+   <script type="text/javascript" src="{{ url_for('static', filename='js/pwa.js') }}"></script>
+   <script type="text/javascript">
+       if (!navigator.serviceWorker.controller) {
+           navigator.serviceWorker.register("/sw.js").then(function(reg) {
+               console.log("Service worker has been registered for scope: " + reg.scope);
+           });
+       }
+  </script>
+
+</body>
+</body>
+
+</html>
