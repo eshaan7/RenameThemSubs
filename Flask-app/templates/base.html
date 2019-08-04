@@ -32,7 +32,7 @@
     {% block body %} {% endblock %}
 
     <!-- PWA stuff -->  
-   <script type="text/javascript" src="{{ url_for('static', filename='js/pwa.js') }}"></script>
+   <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
    <script type="text/javascript">
        if (!navigator.serviceWorker.controller) {
            navigator.serviceWorker.register("/sw.js").then(function(reg) {
