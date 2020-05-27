@@ -4,7 +4,7 @@
 Author: Eshaan Bansal
 github: github.com/eshaan7
 
-                         WHAT THE SCRIPT DOES:
+						 WHAT THE SCRIPT DOES:
 	You download a TV show from torrent and find the suitable subtitle files from some website.
 	Renaming every subtitle file to match the video file is a pain in the ass, isn't it?
 	That's where this script comes in handyy
@@ -68,12 +68,17 @@ def for_current_dir(): #choice=3
 	return
 
 def rename_files(path, vidFiles, subFiles, sub_format):
-	vidFiles.sort(key=lambda f: int(filter(str.isdigit, f)))
-	subFiles.sort(key=lambda f: int(filter(str.isdigit, f)))
+	vidFiles.sort(key=lambda f: int(''.join(filter(str.isdigit, f))))
+	subFiles.sort(key=lambda f: int(''.join(filter(str.isdigit, f))))
 	os.chdir(path)
-	for i,vname in enumerate(vidFiles):
-		print("{0} renamed to {1} ".format(subFiles[i], os.path.splitext(vname)[0]))
-		os.rename(subFiles[i], os.path.splitext(vname)[0]+sub_format)
+	try:
+		assert(len(subFiles)==len(vidFiles))
+		for i,vname in enumerate(vidFiles):
+			print("{0} renamed to {1} ".format(subFiles[i], os.path.splitext(vname)[0]))
+			os.rename(subFiles[i], os.path.splitext(vname)[0]+sub_format)
+	except AssertionError:
+		print(len(subFiles))
+		print(len(vidFiles))
 	#print("\nPress Q to Quit")
 	#msvcrt.getch()
 	return 
