@@ -30,4 +30,4 @@ software that does it for you ? Well, <a href="https://www.youtube.com/watch?v=E
 Buy me a coffee ?
 [![Build Status](https://img.shields.io/badge/Paypal-DONATE-blue.svg?logo=paypal
 )](https://paypal.me/eshaanbansal) <br/>
-BTC: 3DarX5wnUUv9q7NXKshxYmvFnCwECJKFZY
+ETH: [eshaan.eth](https://etherscan.io/address/0x912e804e16f7ef6a3eddf2f7c5bcb38d2a2c5e43)
