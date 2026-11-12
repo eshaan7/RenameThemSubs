@@ -11,6 +11,7 @@ github: github.com/eshaan7
 '''
 
 import os
+import re
 #import msvcrt
 
 def menu():
@@ -68,8 +69,9 @@ def for_current_dir(): #choice=3
 	return
 
 def rename_files(path, vidFiles, subFiles, sub_format):
-	vidFiles.sort(key=lambda f: int(''.join(filter(str.isdigit, f))))
-	subFiles.sort(key=lambda f: int(''.join(filter(str.isdigit, f))))
+	regex_exp = "([sS]\d{1,2}.*[eE]\d{1,2})"
+	vidFiles.sort(key=lambda f: re.search(regex_exp, f)[0])
+	subFiles.sort(key=lambda f: re.search(regex_exp, f)[0])
 	os.chdir(path)
 	try:
 		assert(len(subFiles)==len(vidFiles))
